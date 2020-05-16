@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.gcssloop.recyclerview:pagerlayoutmanager:2.3.8@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/0be54e9083b6e5c276a9f86c9427db0e/jetified-pagerlayoutmanager-2.3.8/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/0be54e9083b6e5c276a9f86c9427db0e/jetified-pagerlayoutmanager-2.3.8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/0be54e9083b6e5c276a9f86c9427db0e/jetified-pagerlayoutmanager-2.3.8/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.gcssloop.recyclerview/pagerlayoutmanager/2.3.8/1cdb29435915a02e4c297d308f9d484861b39d05/pagerlayoutmanager-2.3.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.gcssloop.recyclerview/pagerlayoutmanager/2.3.8/93b51ddba1546714987a87b84c4fcb4511027fa6/pagerlayoutmanager-2.3.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

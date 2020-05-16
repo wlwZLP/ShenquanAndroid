@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.taobao.android:avmpaar3:5.4.36@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/cbe81d7f44f341c6b56a7f8327d999be/jetified-avmpaar3-5.4.36/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/cbe81d7f44f341c6b56a7f8327d999be/jetified-avmpaar3-5.4.36/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

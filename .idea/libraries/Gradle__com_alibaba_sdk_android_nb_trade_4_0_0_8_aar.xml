@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.sdk.android:nb_trade:4.0.0.8@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/6445fcf3431210ddc0d78ac695a5cd94/jetified-nb_trade-4.0.0.8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/6445fcf3431210ddc0d78ac695a5cd94/jetified-nb_trade-4.0.0.8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ali.auth.sdk:alibabauth_ui:2.0.0.6@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/ebb3b29776a27f6241ad6f7f4e4121d8/jetified-alibabauth_ui-2.0.0.6/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/ebb3b29776a27f6241ad6f7f4e4121d8/jetified-alibabauth_ui-2.0.0.6/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

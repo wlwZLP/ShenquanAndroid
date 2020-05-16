@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ShenQuan.iml" filepath="$PROJECT_DIR$/ShenQuan.iml" group="ShenQuan" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ShenquanAndroid.iml" filepath="$PROJECT_DIR$/.idea/ShenquanAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ShenQuan/app" />
+    </modules>
+  </component>
+</project>

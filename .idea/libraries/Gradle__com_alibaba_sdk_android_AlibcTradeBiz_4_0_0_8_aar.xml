@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.sdk.android:AlibcTradeBiz:4.0.0.8@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/89d52646921f3e16e85bfbf0b8a8e222/jetified-AlibcTradeBiz-4.0.0.8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/89d52646921f3e16e85bfbf0b8a8e222/jetified-AlibcTradeBiz-4.0.0.8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jude:easyrecyclerview:4.4.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/aca276d9cec9b8a6cbd1ab0f315057b1/jetified-easyrecyclerview-4.4.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/aca276d9cec9b8a6cbd1ab0f315057b1/jetified-easyrecyclerview-4.4.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/aca276d9cec9b8a6cbd1ab0f315057b1/jetified-easyrecyclerview-4.4.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.jude/easyrecyclerview/4.4.0/892ac12df15d3c00764744d21f3fb7ac4ff9ac3b/easyrecyclerview-4.4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.jude/easyrecyclerview/4.4.0/68a07780fe67c7f00bac4de4d180c701e617830b/easyrecyclerview-4.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.taobao.android:securityguardaar3:5.4.171@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/f6f3aea168eb8553c596aa7b39070cd0/jetified-securityguardaar3-5.4.171/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/f6f3aea168eb8553c596aa7b39070cd0/jetified-securityguardaar3-5.4.171/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

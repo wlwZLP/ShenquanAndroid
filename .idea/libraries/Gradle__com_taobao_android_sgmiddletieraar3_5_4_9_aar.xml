@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.taobao.android:sgmiddletieraar3:5.4.9@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/94d09c3447d43e4fde267298382a28b6/jetified-sgmiddletieraar3-5.4.9/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/94d09c3447d43e4fde267298382a28b6/jetified-sgmiddletieraar3-5.4.9/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

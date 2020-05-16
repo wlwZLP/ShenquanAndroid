@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.sdk.android:alibc_link_partner:4.1.15@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/526db066c032cd0167346bd4ca850e96/jetified-alibc_link_partner-4.1.15/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/526db066c032cd0167346bd4ca850e96/jetified-alibc_link_partner-4.1.15/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
