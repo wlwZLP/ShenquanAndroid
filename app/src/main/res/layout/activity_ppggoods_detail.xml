@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="ppggoodsdetailviewmodel"
+            type="com.dongdian.shenquan.ui.activity.ppgdetail.PPGGoodsDetailViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+
+
+        <LinearLayout
+            android:id="@+id/ppggoods_detail_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{ppggoodsdetailviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="商品详情"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginBottom="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ppggoods_detail_header">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="233dp"
+                    android:id="@+id/ppggoods_detail_image"
+                    binding:url="@{ppggoodsdetailviewmodel.imageUrl}"/>
+
+                <RelativeLayout
+                    android:id="@+id/ppggoods_detail_goods_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="195dp"
+                    android:background="@drawable/background_mne_white"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp">
+
+                    <LinearLayout
+                        android:id="@+id/ppggoods_detail_title_mall_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="22dp"
+                        >
+                        <ImageView
+                            binding:url="@{ppggoodsdetailviewmodel.mall_icon}"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:id="@+id/ppggoods_detail_mall_icon"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#111111"
+                            android:textSize="18sp"
+                            android:id="@+id/ppggoods_detail_title"
+                            android:layout_marginLeft="2dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@{ppggoodsdetailviewmodel.title}"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_below="@+id/ppggoods_detail_title_mall_layout"
+                        android:id="@+id/ppggoods_detail_price_sheng_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FB5434"
+                            android:textSize="20sp"
+                            android:id="@+id/ppggoods_detail_price"
+                            android:layout_marginLeft="2dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@{ppggoodsdetailviewmodel.price}"/>
+
+
+
+                        <TextView
+                            android:visibility="@{ppggoodsdetailviewmodel.shengVisiable}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="8dp"
+                            android:id="@+id/ppggoods_detail_sheng"
+                            android:background="@mipmap/bg_ppg_item_sheng"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="2dp"
+                            android:paddingLeft="12dp"
+                            android:text="@{ppggoodsdetailviewmodel.sheng}"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+
+
+                    <TextView
+                        android:id="@+id/ppggoods_detail_oldprice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:layout_below="@+id/ppggoods_detail_price_sheng_layout"
+                        android:text="@{ppggoodsdetailviewmodel.oldprice}"
+                        android:textSize="13sp"
+                        android:textColor="#888888"
+                        android:layout_marginBottom="23dp"
+                        />
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_mne_white"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/ppggoods_detail_goods_data"
+                    android:id="@+id/ppggoods_detail_buy_count_layout">
+
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/ppggoods_detail_buy_count_button_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#333333"
+                            android:textSize="15sp"
+                            android:text="购买数量"
+                            android:layout_marginLeft="18dp"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="11"/>
+
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:src="@mipmap/ic_jian"
+                            binding:onClickCommand="@{ppggoodsdetailviewmodel.jian}"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#111111"
+                            android:textSize="15sp"
+                            android:text="@{ppggoodsdetailviewmodel.count}"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"/>
+
+                        <ImageView
+                            android:layout_marginRight="19dp"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:src="@mipmap/ic_jia"
+                            binding:onClickCommand="@{ppggoodsdetailviewmodel.jia}"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:background="#FFFCF0"
+                        android:layout_below="@+id/ppggoods_detail_buy_count_button_layout"
+
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_jinggao"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="13sp"
+                            android:text="@{ppggoodsdetailviewmodel.youxiaoqi}"
+                            android:textColor="#DF9600"/>
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_mne_white"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/ppggoods_detail_buy_count_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用须知"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    android:id="@+id/ppggoods_detail_buy_hint_title"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="16dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{ppggoodsdetailviewmodel.help}"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:id="@+id/ppggoods_detail_buy_hint"
+                    android:layout_below="@+id/ppggoods_detail_buy_hint_title"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="20dp"/>
+
+            </RelativeLayout>
+
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/ppggoods_detail_go_home"
+                binding:onClickCommand="@{ppggoodsdetailviewmodel.go_home}"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:src="@mipmap/home_isslec"
+                    android:layout_marginTop="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首页"
+                    android:textSize="11sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="3dp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/ppggoods_detail_go_home"
+                android:id="@+id/ppggoods_detail_go_custom_service"
+                binding:onClickCommand="@{ppggoodsdetailviewmodel.go_custom_service}"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:src="@mipmap/ic_customer_service"
+                    android:layout_marginTop="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客服"
+                    android:textSize="11sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="3dp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@+id/ppggoods_detail_go_custom_service">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/home_top_search_text"
+                    android:text="立即购买"
+                    android:textSize="15sp"
+                    android:textColor="#312903"
+                    android:gravity="center"
+                    binding:onClickCommand="@{ppggoodsdetailviewmodel.buy}"/>
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+</layout>

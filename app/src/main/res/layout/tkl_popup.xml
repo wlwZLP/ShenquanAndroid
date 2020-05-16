@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/tkl_popup_shangpin_layout"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background_mne_white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/tkl_popup_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="为你找到"
+                android:textSize="16sp"
+                android:textColor="#222222"
+                android:gravity="center"/>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tkl_popup_title"
+                android:background="#e5e5e5"
+                android:id="@+id/tkl_popup_fenge"/>
+
+
+
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/tkl_popup_fenge"
+                android:id="@+id/tkl_popup_image"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@mipmap/ic_launcher" />
+
+
+            <ImageView
+                android:id="@+id/tkl_popup_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignTop="@+id/tkl_popup_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/tkl_popup_image"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tkl_popup_shangpin_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tkl_popup_image"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tkl_popup_icon"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="0dp"
+                android:text="按时大辣椒粉打死了就发打死了就发啦的发老师的"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/tkl_popup_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tkl_popup_icon"
+                android:layout_alignLeft="@+id/tkl_popup_icon"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+            <TextView
+                android:text="300元券"
+                android:id="@+id/tkl_popup_quan"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="4dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/good_juan"
+                android:gravity="center"
+                android:layout_marginTop="7dp"
+                android:layout_alignLeft="@+id/tkl_popup_icon"
+                android:layout_below="@+id/tkl_popup_shop_name"
+                android:textColor="#FB5434"
+                android:textSize="12sp" />
+
+
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/tkl_popup_zhuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tkl_popup_quan"
+                android:layout_below="@+id/tkl_popup_shop_name"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/good_zhuan"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="4dp"
+                android:layout_marginLeft="7dp"
+                android:text="赚100000.8元"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tkl_popup_quanhou_danwei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tkl_popup_quan"
+                android:layout_alignLeft="@+id/tkl_popup_icon"
+                android:text="¥"
+                android:textColor="#FF2C23"
+                android:layout_marginTop="10dp"
+                android:textSize="11sp" />
+
+
+
+            <TextView
+                android:id="@+id/tkl_popup_quanhoujia"
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tkl_popup_quan"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/tkl_popup_quanhou_danwei"
+                android:text="22.8"
+                android:textColor="#FF2C23"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/tkl_popup_quanhou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tkl_popup_quan"
+                android:layout_toRightOf="@+id/tkl_popup_quanhoujia"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="3dp"
+                android:text="券后价"
+                android:textColor="#FB5434"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tkl_popup_yuanjia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tkl_popup_quanhoujia"
+                android:layout_alignLeft="@+id/tkl_popup_icon"
+
+
+                android:text="¥44"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tkl_popup_xiaoliang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tkl_popup_yuanjia"
+
+                android:text="销量40"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tkl_popup_cancle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/popup_cancle"
+                android:textColor="#FB5434"
+                android:textSize="15sp"
+                android:text="取消"/>
+
+            <TextView
+                android:id="@+id/tkl_popup_commit"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/good_zhuan"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:text="领取优惠"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/tkl_popup_content_layout"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/background_mne_white"
+        android:orientation="vertical">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="是否搜索"
+            android:textSize="16sp"
+            android:textColor="#222222"
+            android:gravity="center"/>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e5e5e5"
+            />
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="#333333"
+            android:id="@+id/tkl_popup_content"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <TextView
+
+                android:id="@+id/tkl_popup_content_cancle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/popup_cancle"
+                android:textColor="#FB5434"
+                android:textSize="15sp"
+                android:text="取消搜索"/>
+
+            <TextView
+                android:id="@+id/tkl_popup_content_commit"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/good_zhuan"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:text="立即搜索"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

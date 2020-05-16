@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:background="@mipmap/bg_updata_popup">
+
+
+    <ImageView
+        android:layout_marginTop="53dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_updata_detele"
+        android:id="@+id/updata_popup_finish"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V2.0"
+        android:textSize="18sp"
+        android:textColor="#222222"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/updata_popup_version_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="198dp"
+        android:id="@+id/updata_popup_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"></LinearLayout>
+        <LinearLayout
+            android:id="@+id/updata_popup_button"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+           android:layout_marginTop="381dp"
+            android:gravity="center"
+            android:background="@mipmap/bg_updata_button"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:text="立即升级"
+                android:layout_marginBottom="3dp"
+                />
+
+
+        </LinearLayout>
+
+</RelativeLayout>

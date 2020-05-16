@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="datareportdetailviewmodel"
+            type="com.dongdian.shenquan.ui.activity.datareport.DataReportDetailViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+
+        <LinearLayout
+            android:id="@+id/data_report_detail_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{datareportdetailviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="收益明细"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/data_report_detail_header"
+            android:layout_marginTop="1dp"
+            android:background="#ffffff"
+            android:id="@+id/data_report_detail_recycler"/>
+
+
+
+
+
+
+
+    </RelativeLayout>
+</layout>
+
+
+

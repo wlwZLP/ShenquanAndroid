@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.dongdian.shenquan.R"/>
+        <variable
+            name="membercenterviewmodel"
+            type="com.dongdian.shenquan.ui.activity.membercenter.MembercenterViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+
+        <LinearLayout
+            android:id="@+id/member_center_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#303030"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:scaleType="center"
+                    android:layout_centerVertical="true"
+
+                    android:src="@mipmap/ic_back_white"
+                    binding:onClickCommand="@{membercenterviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="会员中心"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/member_center_header">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="#303030" />
+
+                <LinearLayout
+                    android:layout_marginBottom="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:background="@mipmap/bg_member_center_top"
+                        android:visibility="@{membercenterviewmodel.login}">
+
+                        <ImageView
+                            android:id="@+id/member_center_icon"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginTop="22dp"
+                            binding:url="@{membercenterviewmodel.icon}" />
+
+                        <TextView
+                            android:id="@+id/member_center_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/member_center_icon"
+                            android:layout_marginLeft="12dp"
+                            android:layout_toRightOf="@+id/member_center_icon"
+                            android:text="@{membercenterviewmodel.name}"
+                            android:textColor="#222220"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/member_center_plus_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/member_center_name"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@+id/member_center_icon"
+                            android:background="@drawable/me_plus_level"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="3dp"
+                            android:text="@{membercenterviewmodel.plus_text}"
+                            android:textColor="#FFE569"
+                            android:textSize="11sp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           android:layout_below="@+id/member_center_icon"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="36dp"
+                            android:text="@{membercenterviewmodel.plus_expire}"
+                            android:textColor="#222222"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="立即续费"
+                            android:textSize="15sp"
+                            android:paddingRight="17dp"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="#222222"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="12dp"
+                            binding:onClickCommand="@{membercenterviewmodel.buy}"
+                            android:layout_below="@+id/member_center_icon"
+                            android:background="@drawable/bg_member_center_now"/>
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:visibility="@{membercenterviewmodel.login}"
+                        binding:placeholderRes="@{R.mipmap.membercenter_fifth}"
+                        binding:url="@{membercenterviewmodel.mp_vip2_1}"  />
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="@{membercenterviewmodel.noLogin}"
+                        binding:placeholderRes="@{R.mipmap.membercenter_first}"
+                        binding:url="@{membercenterviewmodel.mp_vip2_1}" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:text="—— 尊享权益 ——"
+                        android:textColor="#222222"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/bg_member_center_center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="会员专享超200项特权"
+                            android:textColor="#FFD117"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="3dp"
+                            android:text="一省到底的品质生活"
+                            android:textColor="#FFF6CA"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <me.crosswall.lib.coverflow.core.PagerContainer
+
+                        android:id="@+id/member_center_pager_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="287dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#ffffff">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/member_center_overlap_pager"
+                            android:layout_width="196dp"
+                            android:layout_height="259dp"
+                            android:layout_gravity="center" />
+
+
+                    </me.crosswall.lib.coverflow.core.PagerContainer>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:text="—— 购物特权 ——"
+                        android:textColor="#222222"
+                        android:textSize="18sp" />
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        binding:placeholderRes="@{R.mipmap.membercenter_second}"
+                        binding:url="@{membercenterviewmodel.mp_vip2_1}" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:text="—— 0元专属特权 ——"
+                        android:textColor="#222222"
+                        android:textSize="18sp" />
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        binding:placeholderRes="@{R.mipmap.membercenter_third}"
+                        binding:url="@{membercenterviewmodel.mp_vip2_1}" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:text="—— 更多特权正在上线中 ——"
+                        android:textColor="#222222"
+                        android:textSize="18sp" />
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        binding:placeholderRes="@{R.mipmap.membercenter_fourth}"
+                        binding:url="@{membercenterviewmodel.mp_vip2_1}" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+        <TextView
+            android:visibility="@{membercenterviewmodel.noLogin}"
+            android:id="@+id/member_center_buy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_home_top"
+            android:gravity="center"
+            android:text="@{membercenterviewmodel.single_price}"
+            android:textColor="#222222"
+            android:textSize="18sp"
+            binding:onClickCommand="@{membercenterviewmodel.buy}" />
+
+        <LinearLayout
+            android:visibility="@{membercenterviewmodel.noLogin}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="37dp"
+            android:layout_marginBottom="40dp"
+            android:background="@mipmap/bg_member_center_bottom"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="开通后7天内，如无享受过任何会员特权，支持退款"
+                android:textColor="#FFF6CA"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>
+
+
+

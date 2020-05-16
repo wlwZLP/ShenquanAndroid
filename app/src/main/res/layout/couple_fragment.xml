@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="couplefragmentviewmodel"
+            type="com.dongdian.shenquan.ui.fragment.couple.CoupleFragmentViewModel" />
+    </data>
+    <LinearLayout
+        android:background="#f6f6f6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/couple_fragment_recycler"/>
+    </LinearLayout>
+</layout>
+
+
+
+

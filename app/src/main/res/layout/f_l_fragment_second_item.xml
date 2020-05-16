@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        android:textSize="14sp"
+        android:paddingLeft="20dp"
+        android:background="#f6f6f6"
+        android:layout_marginTop="10dp"
+        android:id="@+id/f_l_fragment_second_item_title"/>
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/f_l_fragment_second_item_recycler"/>
+
+
+
+</LinearLayout>

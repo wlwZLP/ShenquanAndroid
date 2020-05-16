@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="myteamviewmodel"
+            type="com.dongdian.shenquan.ui.activity.myteam.MyTeamViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+        <LinearLayout
+            android:id="@+id/my_team_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{myteamviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="我的团队"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_team_title"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_below="@+id/my_team_header"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="直邀"
+                android:textColor="#FFD409"
+                android:textSize="16sp"
+                android:id="@+id/my_team_title_zhiyao"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#e5e5e5"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="其他"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:id="@+id/my_team_title_qita"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_team_title"
+            android:background="@color/white"
+            android:layout_marginTop="1dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="14dp"
+                android:textSize="16sp"
+                android:textColor="#111111"
+                android:text="@{myteamviewmodel.renshu}"
+                android:id="@+id/my_team_renshu"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/my_team_renshu"
+                android:layout_marginRight="12dp"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                android:text="@{myteamviewmodel.parentName}"/>
+
+            <TextView
+                android:id="@+id/my_team_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/my_team_renshu"
+                android:layout_below="@+id/my_team_renshu"
+               android:layout_marginTop="5dp"
+                android:layout_marginRight="12dp"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:text="@{myteamviewmodel.hint}"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/my_team_hint"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#f6f6f6"
+                android:id="@+id/my_team_recycler_header"
+                >
+                <TextView
+                    android:layout_width="61dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:text="头像"
+                    android:textSize="13sp"
+                    android:textColor="#666666"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="81dp"
+                    android:layout_height="match_parent"
+                    android:text="昵称"
+                    android:textSize="13sp"
+                    android:textColor="#666666"
+                    android:gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/my_team_guimo_layout"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/my_team_guimo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="团队规模(人)"
+                        android:textSize="13sp"
+                        android:textColor="#666666"
+                        android:gravity="center_vertical"/>
+                    <ImageView
+                        android:layout_marginTop="1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/my_team_guimo"
+                        android:id="@+id/my_team_guimo_shang"
+                        android:src="@mipmap/ic_shang_iss"
+                        android:layout_toRightOf="@+id/my_team_guimo"
+                        android:layout_marginLeft="5dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/my_team_guimo_shang"
+                        android:id="@+id/my_team_guimo_xia"
+                        android:src="@mipmap/ic_xia_s"
+                        android:layout_toRightOf="@+id/my_team_guimo"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/my_team_time_layout"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/my_team_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="加入时间"
+                        android:textSize="13sp"
+                        android:textColor="#666666"
+                        android:gravity="center_vertical"/>
+                    <ImageView
+                        android:layout_marginTop="1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/my_team_time"
+                        android:id="@+id/my_team_time_shang"
+                        android:src="@mipmap/ic_shang_iss"
+                        android:layout_toRightOf="@+id/my_team_time"
+                        android:layout_marginLeft="5dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/my_team_time_shang"
+                        android:id="@+id/my_team_time_xia"
+                        android:src="@mipmap/ic_xia_iss"
+                        android:layout_toRightOf="@+id/my_team_time"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"/>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/my_team_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_team_recycler_header"
+                android:layout_marginBottom="28dp"/>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</layout>
+
+
+

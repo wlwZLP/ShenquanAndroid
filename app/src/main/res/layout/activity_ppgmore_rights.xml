@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ppgmorerightsviewmodel"
+            type="com.dongdian.shenquan.ui.activity.ppgmorerights.PPGMoreRightsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="13dp"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="@drawable/home_top_search"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginLeft="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_home_fragment_search"/>
+                <EditText
+                    android:text="@={ppgmorerightsviewmodel.keyword}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:hint="粘贴标题，搜索优惠"
+                    android:textColorHint="#999999"
+                    android:background="@null"
+                    android:textColor="#222222"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="13sp"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView
+                    binding:onClickCommand="@{ppgmorerightsviewmodel.search}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center"
+                    android:background="@drawable/home_top_search_text"
+                    android:text="搜索"
+                    android:textColor="#222222"
+                    android:textSize="13sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"/>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                binding:onClickCommand="@{ppgmorerightsviewmodel.finish}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="11dp"
+                android:layout_marginLeft="12dp"
+                android:textColor="#666666"
+                android:textSize="15sp"
+                android:text="取消"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f6f6f6">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f6f6f6"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/ic_ppgmore_top_hot" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="46dp"
+                            android:layout_marginLeft="12dp"
+                            android:background="@drawable/background_mne_white"
+                            android:layout_marginRight="12dp"
+                            android:orientation="vertical">
+                            <com.jude.easyrecyclerview.EasyRecyclerView
+                                android:id="@+id/ppg_more_rights_top_hot_recycler"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                 />
+                        </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/ppg_more_rights_commontab"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="#FFD409"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabMinWidth="70dp"
+                    app:tabSelectedTextColor="#222222"
+                    app:tabTextColor="#666666"
+
+                    />
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/ppg_more_rights_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f6f6f6">
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="coupondetailviewmodel"
+            type="com.dongdian.shenquan.ui.activity.mycoupon.CouponDetailViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+        <LinearLayout
+            android:id="@+id/coupon_detail_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{coupondetailviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="查看卡券"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@+id/coupon_detail_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/coupon_detail_good_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/bg_coupon_top">
+
+                    <ImageView
+                        android:id="@+id/coupon_detail_good_icon"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                       binding:url="@{coupondetailviewmodel.url}" />
+
+
+                    <TextView
+                        android:id="@+id/coupon_detail_good_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toRightOf="@+id/coupon_detail_good_icon"
+                        android:text="@{coupondetailviewmodel.goodName}"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/coupon_detail_good_endtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/coupon_detail_good_name"
+                        android:layout_alignLeft="@+id/coupon_detail_good_name"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/coupon_detail_good_icon"
+                        android:text="@{coupondetailviewmodel.goodEndTime}"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/coupon_detail_good_data"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/coupon_detail_coupon_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@drawable/bg_coupon_center"
+                        android:visibility="@{coupondetailviewmodel.kaquanfirst}"
+
+                        >
+
+                        <ImageView
+
+                            android:id="@+id/coupon_detail_coupon_url"
+                            android:layout_width="197dp"
+                            android:scaleType="fitXY"
+                            android:layout_height="197dp"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/coupon_detail_coupon_data_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="227dp"
+
+                        android:background="@drawable/bg_coupon_center"
+                        android:visibility="@{coupondetailviewmodel.kaquansecond}">
+
+                        <TextView
+                            android:id="@+id/coupon_detail_coupon_data_zhanghao_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="卡券账号"
+                            android:padding="0dp"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/coupon_detail_coupon_data_zhanghao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/coupon_detail_coupon_data_zhanghao_title"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:padding="0dp"
+                            android:text="@{coupondetailviewmodel.kahao}"
+                            android:textColor="#333333"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/coupon_detail_coupon_data_kami_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/coupon_detail_coupon_data_zhanghao"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="卡密"
+                            android:padding="0dp"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/coupon_detail_coupon_data_kami"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/coupon_detail_coupon_data_kami_title"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:maxWidth="200dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@{coupondetailviewmodel.kami}"
+                            android:textColor="#333333"
+                            android:padding="0dp"
+                            android:textSize="18sp" />
+
+
+                        <TextView
+                            android:padding="0dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/coupon_detail_coupon_data_kami_title"
+                            android:layout_alignTop="@+id/coupon_detail_coupon_data_kami"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@+id/coupon_detail_coupon_data_kami"
+                            android:text="复制"
+                            android:textColor="#FFD409"
+                            android:textSize="13sp"
+                            binding:onClickCommand="@{coupondetailviewmodel.copy}" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="247dp"
+                        android:background="@drawable/bg_coupon_center"
+                        android:visibility="@{coupondetailviewmodel.kaquanthird}">
+
+                        <TextView
+                            android:padding="0dp"
+                            android:id="@+id/coupon_detail_coupon_data_kami_title_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="71dp"
+                            android:text="卡密"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:padding="0dp"
+                            android:id="@+id/coupon_detail_coupon_data_kami_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/coupon_detail_coupon_data_kami_title_second"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="@{coupondetailviewmodel.kami}"
+                            android:textColor="#333333"
+                            android:textSize="18sp" />
+
+
+                        <TextView
+                            android:padding="0dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/coupon_detail_coupon_data_kami_title_second"
+                            android:layout_alignTop="@+id/coupon_detail_coupon_data_kami_second"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@+id/coupon_detail_coupon_data_kami_second"
+                            android:text="复制"
+                            android:textColor="#FFD409"
+                            android:textSize="13sp"
+                            binding:onClickCommand="@{coupondetailviewmodel.copy}" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_kaquan_detail_bottom"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="23dp"
+                            android:text="使用须知"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="@{coupondetailviewmodel.guize}"
+                            android:textColor="#666666"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+
+</layout>
+
+
+

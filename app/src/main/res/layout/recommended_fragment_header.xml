@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+    </data>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.dongdian.shenquan.view.circle.ImageCycleView
+                android:id="@+id/recommended_fragment_header_imagecycle"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="12dp" />
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/recommended_fragment_header_channels_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/recommended_fragment_header_middles_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp" />
+
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/recommended_fragment_header_zones_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#f6f6f6" />
+
+
+            <RelativeLayout
+                android:id="@+id/recommended_fragment_header_flash_sales_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/recommended_fragment_header_flash_sales_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="限时抢购"
+                    android:textColor="#222222"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/recommended_fragment_header_flash_sales_time_first"
+                    android:layout_width="15dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/recommended_fragment_header_flash_sales_title"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/recommended_fragment_header_flash_sales_title"
+                    android:background="#222222"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="2"
+                    android:textColor="#FFD409"
+                    android:textSize="13sp" />
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/recommended_fragment_header_flash_sales_title"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/recommended_fragment_header_flash_sales_time_first"
+                    android:background="#222222"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="2"
+                    android:id="@+id/recommended_fragment_header_flash_sales_time_second"
+                    android:textColor="#FFD409"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/recommended_fragment_header_flash_sales_title"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/recommended_fragment_header_flash_sales_time_second"
+
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text=":"
+                    android:id="@+id/recommended_fragment_header_flash_sales_time_fenge_first"
+                    android:textColor="#222222"
+                    android:textSize="13sp" />
+
+
+
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/recommended_fragment_header_flash_sales_title"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/recommended_fragment_header_flash_sales_time_fenge_first"
+                    android:background="#222222"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="2"
+                    android:id="@+id/recommended_fragment_header_flash_sales_time_third"
+                    android:textColor="#FFD409"
+                    android:textSize="13sp" />
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/recommended_fragment_header_flash_sales_title"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/recommended_fragment_header_flash_sales_time_third"
+                    android:background="#222222"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="2"
+                    android:id="@+id/recommended_fragment_header_flash_sales_time_fourth"
+                    android:textColor="#FFD409"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/recommended_fragment_header_flash_sales_title"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/recommended_fragment_header_flash_sales_time_fourth"
+
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text=":"
+                    android:id="@+id/recommended_fragment_header_flash_sales_time_fenge_second"
+                    android:textColor="#222222"
+                    android:textSize="13sp" />
+
+
+
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/recommended_fragment_header_flash_sales_title"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/recommended_fragment_header_flash_sales_time_fenge_second"
+                    android:background="#222222"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="2"
+                    android:id="@+id/recommended_fragment_header_flash_sales_time_fifth"
+                    android:textColor="#FFD409"
+                    android:textSize="13sp" />
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/recommended_fragment_header_flash_sales_title"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/recommended_fragment_header_flash_sales_time_fifth"
+                    android:background="#222222"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="2"
+                    android:id="@+id/recommended_fragment_header_flash_sales_time_sixth"
+                    android:textColor="#FFD409"
+                    android:textSize="13sp" />
+
+
+
+                <LinearLayout
+                    android:id="@+id/recommended_fragment_header_flash_sales_title_more"
+                    android:layout_alignBottom="@+id/recommended_fragment_header_flash_sales_title"
+                    android:paddingBottom="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentRight="true">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_flash_sales_next"
+                        android:layout_marginLeft="4dp"
+                        />
+                </LinearLayout>
+
+
+
+
+                <com.jude.easyrecyclerview.EasyRecyclerView
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recommended_fragment_header_flash_sales_recycler"
+                    android:layout_below="@+id/recommended_fragment_header_flash_sales_title"/>
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:background="#f6f6f6"
+            android:layout_height="wrap_content"
+            android:textColor="#222222"
+            android:textSize="18sp"
+            android:text="热卖推荐"
+            android:paddingLeft="12dp"
+            android:paddingTop="16dp"/>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

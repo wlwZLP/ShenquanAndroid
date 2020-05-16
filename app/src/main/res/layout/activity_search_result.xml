@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="searchresultviewmodel"
+            type="com.dongdian.shenquan.ui.activity.search.SearchResultViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+        <LinearLayout
+            android:id="@+id/search_result_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+        <LinearLayout
+            binding:onClickCommand="@{searchresultviewmodel.goback}"
+            android:id="@+id/search_resulttop_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="13dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_top_search"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:src="@mipmap/ic_home_fragment_search" />
+
+            <TextView
+                android:id="@+id/search_result_top_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@{searchresultviewmodel.searchKey}"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+            <TextView
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#666666"
+                android:textSize="15sp"
+                binding:onClickCommand="@{searchresultviewmodel.finish}" />
+
+        </LinearLayout>
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:layout_below="@+id/search_result_top"
+            android:id="@+id/search_result_mytab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            app:tl_indicator_color="#FFD409"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_space_equal="true"
+
+            app:tl_textSelectColor="#222222"
+            app:tl_textUnselectColor="#666666"
+            app:tl_textsize="14sp"></com.flyco.tablayout.SlidingTabLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/search_result_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_result_mytab"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation"/>
+
+
+
+
+
+    </RelativeLayout>
+</layout>

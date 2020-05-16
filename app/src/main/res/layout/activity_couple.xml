@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="coupleviewmodel"
+            type="com.dongdian.shenquan.ui.activity.couple.CoupleViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+        <LinearLayout
+            android:id="@+id/couple_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{coupleviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="新手教程"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/couple_header"
+            android:id="@+id/couple_mytab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            app:tl_indicator_color="#FFD409"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_space_equal="true"
+
+            app:tl_textSelectColor="#222222"
+            app:tl_textUnselectColor="#666666"
+            app:tl_textsize="14sp"></com.flyco.tablayout.SlidingTabLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/couple_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/couple_mytab"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation"/>
+
+
+
+    </RelativeLayout>
+</layout>

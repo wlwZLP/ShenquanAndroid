@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+    <RelativeLayout
+
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_mne_white">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="113dp"
+            android:id="@+id/my_footprint_item_goods_icon"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_footprint_item_goods_icon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:id="@+id/my_footprint_item_goods_title"/>
+
+
+
+        <TextView
+         android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_footprint_item_goods_title"
+
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#FB5434"
+            android:textSize="15sp"
+            android:id="@+id/my_footprint_item_goods_price"/>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@+id/my_footprint_item_goods_title"
+            android:layout_below="@+id/my_footprint_item_goods_title"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:layout_marginTop="6dp"
+            android:id="@+id/my_footprint_item_goods_old_price"/>
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

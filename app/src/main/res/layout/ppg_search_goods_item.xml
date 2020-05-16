@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:background="@drawable/background_mne_white"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="133dp"
+            android:layout_height="82dp"
+            android:id="@+id/ppg_item_goods_item_image"/>
+
+
+        <View
+            android:layout_marginLeft="12dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e5e5e5"/>
+
+
+        <RelativeLayout
+            android:layout_marginLeft="12dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ppg_item_goods_item_mall_icon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#111111"
+                android:textSize="15sp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/ppg_item_goods_item_mall_icon"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/ppg_item_goods_item_title"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FB5434"
+                android:textSize="17sp"
+                android:id="@+id/ppg_item_goods_item_price"
+                android:layout_below="@+id/ppg_item_goods_item_mall_icon"
+                android:layout_marginTop="7dp"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/ppg_item_goods_item_sheng"
+                android:layout_below="@+id/ppg_item_goods_item_mall_icon"
+                android:layout_toRightOf="@+id/ppg_item_goods_item_price"
+               android:src="@mipmap/ppg_search_good_zhuanxiang"
+                android:gravity="center_vertical|right"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#888888"
+                android:textSize="13sp"
+                android:id="@+id/ppg_item_goods_item_old_price"
+                android:layout_below="@+id/ppg_item_goods_item_price"
+                android:layout_marginTop="7dp"/>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

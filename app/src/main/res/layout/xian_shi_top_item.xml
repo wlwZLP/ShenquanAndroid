@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   android:gravity="center_horizontal"
+    android:background="#363636"
+    android:id="@+id/xian_shi_top_item_layout">
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="adkhfakds"
+        android:id="@+id/xian_shi_top_item_time"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+
+        android:text="adkfakjdshf"
+        android:id="@+id/xian_shi_top_item_state"/>
+</LinearLayout>

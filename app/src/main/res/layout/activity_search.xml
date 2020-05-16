@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="searchviewmodel"
+            type="com.dongdian.shenquan.ui.activity.search.SearchViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+
+        <LinearLayout
+            android:id="@+id/search_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <LinearLayout
+
+                android:id="@+id/search_top_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/home_top_search"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:src="@mipmap/ic_home_fragment_search" />
+
+                <EditText
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:id="@+id/search_top_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="粘贴标题，搜索优惠"
+                    android:text="@={searchviewmodel.searchKey}"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#666666"
+                android:textSize="15sp"
+                binding:onClickCommand="@{searchviewmodel.finish}" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/search_top_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/search_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/search_top_title_tb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="淘宝"
+                android:textColor="#FFD409"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/search_top_title_tm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="天猫"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:textSize="15sp"
+                android:text="京东"
+                android:id="@+id/search_top_title_jd"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:textSize="15sp"
+                android:text="拼多多"
+                android:id="@+id/search_top_title_pdd"/>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            binding:onClickCommand="@{searchviewmodel.couple}"
+            android:layout_below="@+id/search_top_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_sanbu_shengqian"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:scaleType="fitXY"
+            android:id="@+id/search_top_shengqian"/>
+
+
+
+        <RelativeLayout
+            android:visibility="@{searchviewmodel.searchLiShiVisiable}"
+            android:layout_below="@+id/search_top_shengqian"
+            android:id="@+id/search_lishi_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="搜索历史"
+                android:textColor="#232321"
+                android:textSize="13sp" />
+
+            <ImageView
+                binding:onClickCommand="@{searchviewmodel.clean}"
+                android:id="@+id/search_lishi_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:src="@mipmap/shanchu" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="@{searchviewmodel.searchLiShiVisiable}"
+            android:layout_below="@+id/search_lishi_layout"
+            android:id="@+id/search_lishi_favinfo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.zhy.view.flowlayout.TagFlowLayout
+
+                android:id="@+id/search_lishi_favinfo"
+                zhy:max_select="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/search_lishi_hot"
+            android:layout_below="@+id/search_lishi_favinfo_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="实时热搜"
+            android:textColor="#232321"
+            android:textSize="13sp" />
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:layout_below="@+id/search_lishi_hot"
+            android:id="@+id/search_lishi_id_flowlayout"
+            zhy:max_select="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+        </com.zhy.view.flowlayout.TagFlowLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="changealipyviewmodel"
+            type="com.dongdian.shenquan.ui.activity.changeuser.ChangeAlipyViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+
+
+        <LinearLayout
+            android:id="@+id/change_alipy_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{changealipyviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="绑定支付宝"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/change_alipy_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/background_mne_white"
+            android:layout_below="@+id/change_alipy_header"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/change_alipy_alipy_account"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#222222"
+                    android:text="支付宝"
+                    android:layout_marginLeft="12dp"/>
+
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:textSize="15sp"
+                    android:textColor="#222222"
+                    android:textColorHint="#f6f6f6"
+                    android:hint="请输入支付宝账号"
+                    android:layout_marginRight="12dp"
+                    android:text="@{changealipyviewmodel.alipy_account}"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:id="@+id/change_alipy_view"
+                android:layout_below="@+id/change_alipy_alipy_account"/>
+
+            <LinearLayout
+                android:layout_below="@+id/change_alipy_view"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/change_alipy_real_name"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#222222"
+                    android:text="姓名"
+                    android:layout_marginLeft="12dp"/>
+
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:textSize="15sp"
+                    android:textColor="#222222"
+                    android:textColorHint="#f6f6f6"
+                    android:hint="请输入姓名"
+                    android:layout_marginRight="12dp"
+                    android:text="@{changealipyviewmodel.real_name}"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/change_alipy_data"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/home_top_search_text"
+            android:text="确定"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:gravity="center"
+            binding:onClickCommand="@{changealipyviewmodel.commit}"/>
+
+
+
+
+
+    </RelativeLayout>
+</layout>
+
+
+
+

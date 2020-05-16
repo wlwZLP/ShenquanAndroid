@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="myorderlistviewmodel"
+            type="com.dongdian.shenquan.ui.activity.myorder.MyOrderListViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6"
+        >
+        <LinearLayout
+            android:id="@+id/my_order_list_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{myorderlistviewmodel.finish}" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/my_order_list_select"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/my_order_select_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@{myorderlistviewmodel.title}"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/bottom_s"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_below="@+id/my_order_list_header"
+            android:id="@+id/my_order_list_title_type_one"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+            <TextView
+                android:clickable="true"
+                android:id="@+id/my_order_list_all"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="全部"
+                android:textColor="#FFD409"/>
+            <TextView
+                android:clickable="true"
+                android:id="@+id/my_order_list_daijiesuan"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="待结算"
+                android:textColor="#666666"/>
+            <TextView
+                android:clickable="true"
+                android:id="@+id/my_order_list_yijiesuan"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="已结算"
+                android:textColor="#666666"/>
+            <TextView
+                android:clickable="true"
+                android:id="@+id/my_order_list_yishixiao"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="已失效"
+                android:textColor="#666666"/>
+
+        </LinearLayout>
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/my_order_list_title_type_one"
+            android:id="@+id/my_order_list_recycler"/>
+
+    </RelativeLayout>
+</layout>
+

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#f6f6f6"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/first_fragment_item_shangpin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/background_mne_white"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/first_fragment_item_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/first_fragment_item_image_yushou"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+
+        <ImageView
+            android:id="@+id/first_fragment_item_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignTop="@+id/first_fragment_item_image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/first_fragment_item_image"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/first_fragment_item_shangpin_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/first_fragment_item_image"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/first_fragment_item_icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:text="按时大辣椒粉打死了就发打死了就发啦的发老师的"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/first_fragment_item_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_fragment_item_icon"
+            android:layout_alignLeft="@+id/first_fragment_item_icon"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+        <TextView
+            android:text="300元券"
+            android:id="@+id/first_fragment_item_quan"
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="4dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="4dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/good_juan"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_alignLeft="@+id/first_fragment_item_icon"
+            android:layout_below="@+id/first_fragment_item_shop_name"
+            android:textColor="#FB5434"
+            android:textSize="12sp" />
+
+
+
+        <TextView
+            android:id="@+id/first_fragment_item_zhuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/first_fragment_item_quan"
+            android:layout_below="@+id/first_fragment_item_shop_name"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/good_zhuan"
+            android:paddingLeft="5dp"
+            android:paddingTop="4dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="4dp"
+            android:layout_marginLeft="7dp"
+            android:text="赚100000.8元"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/first_fragment_item_quanhou_danwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_below="@+id/first_fragment_item_quan"
+            android:layout_alignLeft="@+id/first_fragment_item_icon"
+            android:text="¥"
+            android:textColor="#FF2C23"
+            android:layout_marginTop="10dp"
+            android:textSize="11sp" />
+
+
+
+        <TextView
+            android:id="@+id/first_fragment_item_quanhoujia"
+            android:layout_marginLeft="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_fragment_item_quan"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/first_fragment_item_quanhou_danwei"
+            android:text="22.8"
+            android:textColor="#FF2C23"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+
+        <TextView
+            android:id="@+id/first_fragment_item_quanhou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_fragment_item_quan"
+            android:layout_toRightOf="@+id/first_fragment_item_quanhoujia"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:text="券后价"
+            android:textColor="#FB5434"
+            android:textSize="12sp" />
+
+
+
+        <TextView
+            android:id="@+id/first_fragment_item_yuanjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_fragment_item_quanhoujia"
+            android:layout_alignLeft="@+id/first_fragment_item_icon"
+
+
+            android:text="¥44"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/first_fragment_item_xiaoliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/first_fragment_item_yuanjia"
+
+            android:text="销量40"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/first_fragment_item_zhuanji_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/first_fragment_item_zhuanji_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/background_mne_white"
+       >
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/first_fragment_item_zhuanji_top_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_fragment_item_zhuanji_top_image">
+            <RelativeLayout
+                android:id="@+id/first_fragment_item_zhuanji_first_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:background="@drawable/background_first_fragment_alibum_item_image_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/first_fragment_item_zhuanji_first_shangpin_image_layout">
+                    <ImageView
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_width="97dp"
+                        android:layout_height="97dp"
+                        android:id="@+id/first_fragment_item_zhuanji_first_shangpin_image"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/first_fragment_item_zhuanji_first_shangpin_jiang"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignLeft="@+id/first_fragment_item_zhuanji_first_shangpin_image_layout"
+                    android:layout_alignBottom="@+id/first_fragment_item_zhuanji_first_shangpin_image_layout"
+                    android:background="@drawable/background_first_fragment_shangpin_jiang"
+                    android:paddingTop="2dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="2dp"
+                    android:text="奖¥20.9"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="我诶个去漠啊啊"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+
+                    android:id="@+id/first_fragment_item_zhuanji_first_shangpin_title"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_first_shangpin_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/first_fragment_item_zhuanji_first_shangpin_quanhou"
+                    android:layout_marginTop="4dp"
+                    android:textSize="11sp"
+                    android:textColor="#999999"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_first_shangpin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="券后"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/first_fragment_item_zhuanji_first_shangpin_quanhou_danwei"
+                    android:layout_marginTop="4dp"
+                    android:textSize="11sp"
+                    android:textColor="#FF2323"
+                    android:layout_toRightOf="@+id/first_fragment_item_zhuanji_first_shangpin_quanhou"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_first_shangpin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/first_fragment_item_zhuanji_first_shangpin_quanhoujia"
+                    android:textSize="16sp"
+                    android:textColor="#FF2323"
+                    android:layout_toRightOf="@+id/first_fragment_item_zhuanji_first_shangpin_quanhou_danwei"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_first_shangpin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28.8"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/first_fragment_item_zhuanji_second_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:background="@drawable/background_first_fragment_alibum_item_image_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/first_fragment_item_zhuanji_second_shangpin_image_layout">
+                    <ImageView
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_width="97dp"
+                        android:layout_height="97dp"
+                        android:id="@+id/first_fragment_item_zhuanji_second_shangpin_image"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/first_fragment_item_zhuanji_second_shangpin_jiang"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignLeft="@+id/first_fragment_item_zhuanji_second_shangpin_image_layout"
+                    android:layout_alignBottom="@+id/first_fragment_item_zhuanji_second_shangpin_image_layout"
+                    android:background="@drawable/background_first_fragment_shangpin_jiang"
+                    android:paddingTop="2dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="2dp"
+                    android:text="奖¥20.9"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="我诶个去，你就是个沙漠啊啊 啊啊啊啊啊 啊啊啊啊啊啊啊啊啊"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+
+                    android:id="@+id/first_fragment_item_zhuanji_second_shangpin_title"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_second_shangpin_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/first_fragment_item_zhuanji_second_shangpin_quanhou"
+                    android:layout_marginTop="4dp"
+                    android:textSize="11sp"
+                    android:textColor="#999999"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_second_shangpin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="券后"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/first_fragment_item_zhuanji_second_shangpin_quanhou_danwei"
+                    android:layout_marginTop="4dp"
+                    android:textSize="11sp"
+                    android:textColor="#FF2323"
+                    android:layout_toRightOf="@+id/first_fragment_item_zhuanji_second_shangpin_quanhou"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_second_shangpin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/first_fragment_item_zhuanji_second_shangpin_quanhoujia"
+                    android:textSize="16sp"
+                    android:textColor="#FF2323"
+                    android:layout_toRightOf="@+id/first_fragment_item_zhuanji_second_shangpin_quanhou_danwei"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_second_shangpin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28.8"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/first_fragment_item_zhuanji_third_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:background="@drawable/background_first_fragment_alibum_item_image_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/first_fragment_item_zhuanji_third_shangpin_image_layout">
+                    <ImageView
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_width="97dp"
+                        android:layout_height="97dp"
+                        android:id="@+id/first_fragment_item_zhuanji_third_shangpin_image"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/first_fragment_item_zhuanji_third_shangpin_jiang"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignLeft="@+id/first_fragment_item_zhuanji_third_shangpin_image_layout"
+                    android:layout_alignBottom="@+id/first_fragment_item_zhuanji_third_shangpin_image_layout"
+                    android:background="@drawable/background_first_fragment_shangpin_jiang"
+                    android:paddingTop="2dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="2dp"
+                    android:text="奖¥20.9"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="我诶个去，你就是个沙漠啊啊 啊啊啊啊啊 啊啊啊啊啊啊啊啊啊"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:id="@+id/first_fragment_item_zhuanji_third_shangpin_title"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_third_shangpin_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/first_fragment_item_zhuanji_third_shangpin_quanhou"
+                    android:layout_marginTop="4dp"
+                    android:textSize="11sp"
+                    android:textColor="#999999"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_third_shangpin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="券后"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/first_fragment_item_zhuanji_third_shangpin_quanhou_danwei"
+                    android:layout_marginTop="4dp"
+                    android:textSize="11sp"
+                    android:textColor="#FF2323"
+                    android:layout_toRightOf="@+id/first_fragment_item_zhuanji_third_shangpin_quanhou"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_third_shangpin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/first_fragment_item_zhuanji_third_shangpin_quanhoujia"
+                    android:textSize="16sp"
+                    android:textColor="#FF2323"
+                    android:layout_toRightOf="@+id/first_fragment_item_zhuanji_third_shangpin_quanhou_danwei"
+                    android:layout_below="@+id/first_fragment_item_zhuanji_third_shangpin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28.8"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

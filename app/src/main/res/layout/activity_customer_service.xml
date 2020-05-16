@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="customerserviceviewmodel"
+            type="com.dongdian.shenquan.ui.activity.customerservice.CustomerServiceViewModel" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+
+        <LinearLayout
+            android:id="@+id/customer_service_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{customerserviceviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="召唤客服"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customer_service_header"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="21dp"
+            android:background="@drawable/background_mne_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="@{customerserviceviewmodel.nickname}"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="客服在线时间：周一-周五：9:00-17:00"
+                android:textColor="#333333"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/customer_service_qrcode"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_marginTop="20dp"
+                binding:url="@{customerserviceviewmodel.qrcode}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="截图二维码保存到相册，打开微信扫一扫"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/customer_service_left"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="17dp"
+                    android:text="@{customerserviceviewmodel.wechat}"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/customer_service_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="17dp"
+                    android:text="复制微信号"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    binding:onClickCommand="@{customerserviceviewmodel.copy}" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="28dp"
+                android:text="添加客服好友了解权益"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <com.dongdian.shenquan.view.RoundImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/customer_service_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            binding:url="@{customerserviceviewmodel.avatar}" />
+
+    </RelativeLayout>
+</layout>

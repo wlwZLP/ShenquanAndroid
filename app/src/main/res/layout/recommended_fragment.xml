@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="recommendviewmodel"
+            type="com.dongdian.shenquan.ui.fragment.recommended.RecommendedFragmentViewModel" />
+
+    </data>
+
+        <RelativeLayout
+            android:background="#f6f6f6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recommended_fragment_recycler"/>
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+</layout>

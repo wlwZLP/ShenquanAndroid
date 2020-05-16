@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="addfriendviewmodel"
+            type="com.dongdian.shenquan.ui.activity.addfriend.AddFriendViewModel" />
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+
+        <LinearLayout
+            android:id="@+id/add_friend_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{addfriendviewmodel.finish}" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="邀请好友"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+        <me.crosswall.lib.coverflow.core.PagerContainer
+
+            android:id="@+id/add_friend_pager_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/add_friend_header"
+            android:layout_above="@+id/add_friend_save"
+            android:background="#f6f6f6">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/add_friend_overlap_pager"
+                android:layout_width="265dp"
+                android:layout_height="450dp"
+                android:layout_gravity="center" />
+
+
+        </me.crosswall.lib.coverflow.core.PagerContainer>
+
+        <TextView
+            android:textSize="16sp"
+            android:textColor="#222222"
+            android:text="保存海报"
+            android:gravity="center"
+            android:id="@+id/add_friend_save"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/home_top_search_text"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+           android:layout_alignParentBottom="true"
+            android:layout_marginBottom="27dp"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</layout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="flashviewmodel"
+            type="com.dongdian.shenquan.ui.activity.flash.FlashViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+        <LinearLayout
+            android:id="@+id/flash_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_home_top"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:scaleType="center"
+                    android:layout_centerVertical="true"
+
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{flashviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="限时抢购"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:src="@mipmap/ic_goods_detail_top_search"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="13dp"
+                    binding:onClickCommand="@{flashviewmodel.search}"/>
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            app:tabMode="scrollable"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="180dp"
+            app:tabMinWidth="80dp"
+            app:tabPaddingBottom="-1dp"
+            app:tabPaddingEnd="-1dp"
+            app:tabPaddingStart="-1dp"
+            app:tabPaddingTop="-1dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+           android:background="@drawable/bg_home_top"
+            android:id="@+id/flash_tablayout"
+            android:layout_below="@+id/flash_header"></com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_below="@+id/flash_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/flash_viewpager"></androidx.viewpager.widget.ViewPager>
+
+
+
+
+
+
+    </RelativeLayout>
+</layout>

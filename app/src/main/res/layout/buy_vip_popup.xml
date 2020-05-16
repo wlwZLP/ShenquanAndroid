@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:background="@drawable/background_mne_white"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:adjustViewBounds="true"
+        android:id="@+id/buy_vip_popup_image"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="20dp"
+        >
+
+
+        <TextView
+            android:id="@+id/buy_vip_popup_cancle"
+            android:text="取消"
+            android:textColor="#999999"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/bg_buy_vip_popup_cancle"/>
+        <TextView
+            android:id="@+id/buy_vip_popup_sure"
+            android:text="立即开通"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/bg_buy_vip_popup_sure"/>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

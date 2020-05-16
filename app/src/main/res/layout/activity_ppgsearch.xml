@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ppgsearchviewmodel"
+            type="com.dongdian.shenquan.ui.activity.search.PPGSearchViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6">
+
+        <LinearLayout
+            android:id="@+id/ppg_search_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_login_back"
+                    binding:onClickCommand="@{ppgsearchviewmodel.finish}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="搜索"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/ppg_search_header"
+            android:id="@+id/ppg_search_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            ><EditText
+            android:id="@+id/ppg_search_edit"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/bg_ppg_search_top_edit"
+            android:textColor="#353535"
+            android:paddingLeft="10dp"
+            android:text="@={ppgsearchviewmodel.keyword}"/>
+
+
+
+            <ImageView
+                android:layout_marginRight="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/change_close"
+                binding:onClickCommand="@{ppgsearchviewmodel.clean}"/>
+
+
+
+
+        </RelativeLayout>
+
+
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+
+            android:descendantFocusability="beforeDescendants"
+            android:fastScrollEnabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ppg_search_edit_layout"
+            android:id="@+id/ppg_search_recycler"/>
+    </RelativeLayout>
+</layout>

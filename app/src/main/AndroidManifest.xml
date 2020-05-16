@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dongdian.shenquan">
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:replace="android:allowBackup">
+        <activity android:name=".ui.activity.zlp.Main2Activity"></activity>
+        <activity android:name=".ui.activity.album.AlbumActivity" />
+        <activity
+            android:name=".ui.activity.ppgmorerights.PPGMoreRightsActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".ui.activity.ppggoodslist.PPGCategoryListActivity" />
+        <activity android:name=".ui.activity.membercenter.MembercenterActivity" />
+        <activity android:name=".ui.activity.flash.FlashActivity" />
+        <activity
+            android:name=".ui.activity.mipush.MipushActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/WelcomeStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.StartupPopup"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" />
+        <activity
+            android:name=".ui.activity.search.PPGSearchActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".ui.activity.couple.CoupleActivity" />
+        <activity android:name=".ui.activity.datareport.DataReportDetailActivity" />
+        <activity android:name=".ui.activity.datareport.DataReportActivity" />
+        <activity android:name=".ui.activity.modulelist.ModuleListActivity" />
+        <activity android:name=".ui.activity.search.SearchResultActivity" />
+        <activity android:name=".ui.activity.search.SearchActivity" />
+        <activity android:name=".ui.activity.flgoodslist.FLGoodsListActivity" />
+        <activity android:name=".ui.activity.ppgdetail.PPGGoodsDetailZhiChongActivity" />
+        <activity android:name=".ui.activity.ppggoodslist.PPGGoodsListActivity" />
+        <activity android:name=".ui.activity.ppgdetail.PPGGoodsDetailActivity" />
+        <activity android:name=".ui.activity.customerservice.CustomerServiceActivity" />
+        <activity android:name=".ui.activity.addfriend.AddFriendActivity" />
+        <activity
+            android:name=".ui.activity.web.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".ui.activity.myfootprint.MyFootPrintActivity" />
+        <activity android:name=".ui.activity.mycollect.MyCollectActivity" />
+        <activity android:name=".ui.activity.myteam.MyTeamActivity" />
+        <activity android:name=".ui.activity.mycoupon.CouponDetailActivity" />
+        <activity android:name=".ui.activity.mycoupon.MyCouponActivity" />
+        <activity android:name=".ui.activity.myorder.MyOrderListActivity" />
+        <activity android:name=".ui.activity.myorder.MyOrderActivity" />
+        <activity android:name=".ui.activity.withdrawal.WithdrawalReportActivity" />
+        <activity android:name=".ui.activity.withdrawal.WithdrawalActivity" />
+        <activity android:name=".ui.activity.changeuser.ChangeAlipyActivity" />
+        <activity android:name=".ui.activity.changeuser.ChangeUserActivity" />
+        <activity android:name=".ui.activity.setting.SettingActivity" />
+        <activity android:name=".ui.activity.goodsdetail.GoodsDetailActivity" />
+        <activity android:name=".ui.activity.login.LoginActivity" />
+
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.activity.main.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="750" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="1334" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+</manifest>
