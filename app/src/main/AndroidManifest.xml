@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:replace="android:allowBackup">
-        <activity android:name=".ui.activity.zlp.Main2Activity"></activity>
+<!--        <activity android:name=".ui.activity.base.Main2Activity"></activity>-->
         <activity android:name=".ui.activity.album.AlbumActivity" />
         <activity
             android:name=".ui.activity.ppgmorerights.PPGMoreRightsActivity"
@@ -34,7 +34,7 @@
         </activity>
         <activity
             android:name=".view.StartupPopup"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/MyDialogStyleBottom" />
         <activity
             android:name=".ui.activity.search.PPGSearchActivity"
@@ -131,7 +131,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>
